@@ -68,7 +68,7 @@ export default function Header() {
             >
               <Link href="/" className="flex items-center gap-3 group" onClick={() => setIsMobileMenuOpen(false)}>
                 <div className="relative h-8 w-8 sm:h-9 sm:w-9 overflow-hidden rounded-md shrink-0">
-                  <img src="/logo.jpeg" alt="Logo" className="h-full w-full object-cover" />
+                  <img src="logo.jpeg" alt="Logo" className="h-full w-full object-cover" />
                 </div>
                 <div className="hidden sm:flex flex-col justify-center">
                   <div
