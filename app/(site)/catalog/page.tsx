@@ -5,7 +5,7 @@ import { pageMeta } from "@/lib/seo";
 export const metadata = pageMeta({
   title: "Каталог",
   description:
-    "Каталог биметаллических радиаторов Tengri Thermo: фильтры по высоте, секциям, мощности и цене. Запрос расчёта онлайн.",
+    "Каталог биметаллических радиаторов Triumph Thermo: фильтры по высоте, секциям, мощности и цене. Запрос расчёта онлайн.",
   urlPath: "/catalog",
 });
 

@@ -6,7 +6,7 @@ import { pageMeta } from "@/lib/seo";
 export const metadata = pageMeta({
   title: "Поставщики",
   description:
-    "Информация для поставщиков и партнёров Tengri Thermo. Совместные проекты, условия и взаимодействие.",
+    "Информация для поставщиков и партнёров Triumph Thermo. Совместные проекты, условия и взаимодействие.",
   urlPath: "/suppliers"
 });
 

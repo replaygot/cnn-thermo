@@ -4,48 +4,47 @@
 
 /* -- Design tokens / variables -- */
 :root {
-  /* === СВЕТЛАЯ ТЕМА (Основная) === */
-  --accent: #ff8c00;
-  --accent-2: #e07b00;
+  /* === СВЕТЛАЯ ТЕМА (Кирпично-красный колхоз) === */
+  --accent: #B22222;    /* Тот самый кирпичный (Firebrick) */
+  --accent-2: #8B0000;  /* Темный кирпич для градиентов */
   
-  /* Светлый фон: чистый белый/светло-серый */
   --bg: #ffffff; 
-  
-  /* Текст */
   --text-main: #0a0a0a;
   --text-muted: #666666;
   
-  /* Карточки и границы */
   --card-bg: #ffffff;
-  --header-bg: rgba(255, 255, 255, 0.85); /* Светлое стекло */
+  --header-bg: rgba(255, 255, 255, 0.85);
   --muted-border: rgba(0, 0, 0, 0.1);
   
-  /* Тени для светлой темы */
   --shadow-1: 0 4px 12px rgba(0, 0, 0, 0.05);
   --shadow-2: 0 10px 30px rgba(0, 0, 0, 0.1);
   
   --glass-effect: blur(14px) saturate(140%);
-  
-  /* Радиусы и шрифты */
   --radius-lg: 16px;
   --radius-md: 12px;
   --radius-sm: 8px;
   --sf-stack: -apple-system, "SF Pro Text", "SF Pro Display", ".SFNSText", "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui, sans-serif;
 }
 
-/* === ТЕМНАЯ ТЕМА (Твой стиль) === */
+/* === ТЕМНАЯ ТЕМА (Сине-оранжевое безумие) === */
 .dark {
-  --bg: linear-gradient(180deg, #050505 0%, #0a0a0b 100%);
+  /* Темно-синий фон вместо черного */
+  --bg: linear-gradient(180deg, #0A192F 0%, #060E1B 100%);
+  
+  /* Оранжевый акцент из старой светлой темы */
+  --accent: #B22222;    /* Тот самый кирпичный (Firebrick) */
+  --accent-2: #8B0000;  /* Темный кирпич для градиентов */
   
   --text-main: #eaeaea;
-  --text-muted: #888282;
+  --text-muted: #8ba0b5; /* Чуть в синеву, чтобы сочеталось */
   
-  --card-bg: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
-  --header-bg: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  --muted-border: rgba(255, 255, 255, 0.06);
+  /* Подложки чуть светлее синего фона */
+  --card-bg: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  --header-bg: linear-gradient(180deg, rgba(10, 25, 47, 0.8), rgba(6, 14, 27, 0.9));
+  --muted-border: rgba(255, 255, 255, 0.08);
   
-  --shadow-1: 0 6px 18px rgba(0, 0, 0, 0.6);
-  --shadow-2: 0 10px 30px rgba(0, 0, 0, 0.65);
+  --shadow-1: 0 6px 18px rgba(0, 0, 0, 0.5);
+  --shadow-2: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 /* -- Typography reset & base -- */
@@ -210,9 +209,10 @@ body {
 }
 .btn--accent {
   background: linear-gradient(180deg, var(--accent), var(--accent-2));
-  color: #fff; /* Всегда белый текст на оранжевом */
+  color: #fff;
   border: 1px solid rgba(0,0,0,0.1);
-  box-shadow: 0 4px 12px rgba(255,140,0,0.3);
+  /* Заменил жесткий оранжевый в тени на прозрачный черный, чтобы работало везде */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
 }
 .btn--ghost {
   background: transparent;

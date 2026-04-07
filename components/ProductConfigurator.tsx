@@ -1,11 +1,13 @@
+// ============================================================
+// ProductConfigurator.tsx
+// ============================================================
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui"; // Проверь правильность импорта Button
-import { formatPriceKZT } from "@/lib/utils"; // Проверь путь к utils
+import { Button } from "@/components/ui";
+import { formatPriceKZT } from "@/lib/utils";
 import Link from "next/link";
 
-// Типизация продукта (можно импортировать из types, если есть)
 interface Product {
   name: string;
   priceKzt: number;
@@ -21,11 +23,9 @@ const colors = [
 export default function ProductConfigurator({ product }: { product: Product }) {
   const [selectedColor, setSelectedColor] = useState("Белый");
 
-  // Функция для WhatsApp с учетом выбранного цвета
   const handleOrderClick = () => {
     const message = `Здравствуйте! Меня интересует радиатор: ${product.name}. Цвет: ${selectedColor}. Цена: ${product.priceKzt} ₸.`;
-    const url = `https://wa.me/77000000000?text=${encodeURIComponent(message)}`; // Замени номер на свой
-    window.open(url, "_blank");
+    window.open(`https://wa.me/77000000000?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   return (
@@ -36,7 +36,10 @@ export default function ProductConfigurator({ product }: { product: Product }) {
 
       {/* Выбор цвета */}
       <div className="mb-6">
-        <div className="text-xs font-bold text-foreground mb-3">Выберите цвет: <span className="text-heat">{selectedColor}</span></div>
+        <div className="text-xs font-bold text-foreground mb-3">
+          Выберите цвет:{" "}
+          <span style={{ color: "var(--accent)" }}>{selectedColor}</span>
+        </div>
         <div className="flex flex-wrap gap-2">
           {colors.map((c) => (
             <button
@@ -44,9 +47,17 @@ export default function ProductConfigurator({ product }: { product: Product }) {
               onClick={() => setSelectedColor(c.name)}
               className={`px-4 py-3 rounded-xl text-xs font-bold border transition-all flex items-center gap-2 ${
                 selectedColor === c.name
-                  ? "bg-secondary border-heat text-foreground ring-1 ring-heat shadow-lg shadow-orange-500/10"
+                  ? "bg-secondary text-foreground"
                   : "bg-background border-border text-muted hover:border-foreground/30 hover:text-foreground"
               }`}
+              style={
+                selectedColor === c.name
+                  ? {
+                      borderColor: "var(--accent)",
+                      boxShadow: "0 0 0 1px var(--accent)",
+                    }
+                  : {}
+              }
             >
               <span className={`w-4 h-4 rounded-full border shadow-sm ${c.bgClass} ${c.borderClass}`} />
               {c.name}
@@ -55,7 +66,7 @@ export default function ProductConfigurator({ product }: { product: Product }) {
         </div>
       </div>
 
-      {/* Блок цены */}
+      {/* Цена */}
       <div className="rounded-2xl bg-secondary p-6 border border-border mb-6">
         <div className="text-xs text-muted mb-1 font-medium">Розничная цена</div>
         <div className="text-4xl font-bold tracking-tight text-foreground">
@@ -68,13 +79,9 @@ export default function ProductConfigurator({ product }: { product: Product }) {
 
       {/* Кнопки */}
       <div className="grid gap-3">
-        <Button 
-            onClick={handleOrderClick}
-            className="w-full bg-heat text-white hover:bg-heat/90 py-6 text-lg font-bold shadow-lg shadow-orange-500/20"
-        >
+        <Button onClick={handleOrderClick} className="w-full py-6 text-lg font-bold">
           Заказать в WhatsApp
         </Button>
-        
         <Link href="/contacts">
           <Button variant="outline" className="w-full bg-transparent border-border text-foreground hover:bg-secondary py-6">
             Связаться с нами

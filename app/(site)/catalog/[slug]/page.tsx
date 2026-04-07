@@ -18,6 +18,6 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
 export const metadata = pageMeta({
   title: "Карточка товара",
-  description: "Технические характеристики и цены на радиаторы Tengri Thermo.",
+  description: "Технические характеристики и цены на радиаторы Triumph Thermo.",
   urlPath: "/catalog"
 });

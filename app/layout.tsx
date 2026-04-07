@@ -7,7 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollProgress from "@/components/ScrollProgress";
 
 export const metadata: Metadata = {
-  title: "Tengri Thermo",
+  title: "Triumph Thermo",
   description: "Премиальные биметаллические радиаторы",
 };
 

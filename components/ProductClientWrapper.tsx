@@ -8,15 +8,16 @@ export default function ProductClientWrapper({ productName }: { productName: str
 
   return (
     <div className="flex flex-col sm:flex-row gap-4">
-      <Button 
-        onClick={() => open("request", { productName })} 
-        className="flex-1 bg-heat text-white hover:bg-orange-600 border-0 font-bold py-4 text-lg shadow-lg"
+      {/* Дефолтный Button уже кирпичный через ui.tsx */}
+      <Button
+        onClick={() => open("request", { productName })}
+        className="flex-1 font-bold py-4 text-lg shadow-lg border-0"
       >
         Оставить заявку
       </Button>
-      <Button 
+      <Button
         variant="outline"
-        onClick={() => open("call")} 
+        onClick={() => open("call")}
         className="flex-1 bg-transparent border-border text-foreground hover:bg-secondary py-4"
       >
         Консультация

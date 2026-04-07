@@ -16,24 +16,27 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // === НАШИ НОВЫЕ ДИНАМИЧЕСКИЕ ЦВЕТА ===
-        // Они берут значения из globals.css (var(--...))
+        // === ДИНАМИЧЕСКИЕ ЦВЕТА (из globals.css) ===
         
-        heat: "var(--accent)",          // Оранжевый
-        background: "var(--bg)",        // Фон страницы (Белый <-> Черный)
-        foreground: "var(--text-main)", // Текст (Черный <-> Белый)
+        // Акцентный цвет (Кирпичный в светлой / Оранжевый в темной)
+        accent: "var(--accent)", 
+        "accent-secondary": "var(--accent-2)",
+        
+        // Старое название для совместимости, если уже юзал bg-heat
+        heat: "var(--accent)",          
+        
+        background: "var(--bg)",        // Белый <-> Темно-синий
+        foreground: "var(--text-main)", // Черный <-> Белый
         muted: "var(--text-muted)",     // Серый текст
         
-        card: "var(--card-bg)",         // Фон карточек
-        header: "var(--header-bg)",     // Фон хедера
-        border: "var(--muted-border)",  // Цвет границ
+        card: "var(--card-bg)",         
+        header: "var(--header-bg)",     
+        border: "var(--muted-border)",  
 
-        // === СОВМЕСТИМОСТЬ (ЧТОБЫ НИЧЕГО НЕ СЛОМАЛОСЬ) ===
-        // Мы перенаправляем старые названия на новые переменные
-        paper: "var(--bg)",        // Раньше был черный, теперь динамический
-        ink: "var(--text-main)",   // Раньше был белый, теперь динамический
+        // Совместимость
+        paper: "var(--bg)",        
+        ink: "var(--text-main)",   
         
-        // Оставляем палитру stone для серых элементов, если где-то используется напрямую
         stone: {
           50: "#f9fafb",
           100: "#f3f4f6",
@@ -44,7 +47,6 @@ const config: Config = {
         },
       },
       
-      // Анимации оставляем как есть
       animation: {
         marquee: "marquee 25s linear infinite",
         pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",

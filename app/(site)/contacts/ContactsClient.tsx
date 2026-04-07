@@ -23,7 +23,7 @@ export default function ContactsClient() {
               Контакты
             </span>
             <h1 className="text-4xl md:text-5xl font-black text-foreground mb-6 leading-tight">
-              Связь с Tengri Thermo
+              Связь с Triumph Thermo
             </h1>
             <p className="text-muted max-w-md text-base md:text-lg mb-12">
               Если вы хотите сделать оптовый заказ, задать вопрос по конфигурации или рассчитать проект — напишите нам, ответим быстро!

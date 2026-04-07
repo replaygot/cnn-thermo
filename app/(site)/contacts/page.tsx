@@ -4,7 +4,7 @@ import { pageMeta } from "@/lib/seo";
 export const metadata = pageMeta({
   title: "Контакты",
   description:
-    "Контакты Tengri Thermo. Телефон и формы: заказать звонок, оставить заявку, скачать прайс. Без карты.",
+    "Контакты Triumph Thermo. Телефон и формы: заказать звонок, оставить заявку, скачать прайс. Без карты.",
   urlPath: "/contacts",
 });
 
