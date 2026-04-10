@@ -26,7 +26,7 @@ export default function HomePage() {
         bg-black убран — hero всегда поверх видео, фон не виден.
         Оставляем bg-background как fallback если видео не загрузится.
       */}
-      <section className="relative h-screen min-h-[600px] w-full overflow-hidden flex items-center justify-center bg-background">
+      <section className="relative h-screen min-h-[600px] w-full overflow-hidden flex items-center justify-center bg-black">
 
         {/* Видео-фон */}
         <div className="absolute inset-0 z-0">
@@ -281,7 +281,13 @@ export default function HomePage() {
               </div>
               <div>
                 <Link href="/dealers">
-                  <Button className="!bg-foreground !text-background hover:opacity-90 border-0 font-bold">
+                <Button
+                  className="w-full sm:w-auto text-white border-0 px-8 py-4 text-lg transition-transform hover:scale-105"
+                  style={{
+                    background: "linear-gradient(180deg, var(--accent), var(--accent-2))",
+                    boxShadow: "0 0 20px rgba(178, 34, 34, 0.4)",
+                  }}
+                >
                     Страница партнёрам
                   </Button>
                 </Link>
