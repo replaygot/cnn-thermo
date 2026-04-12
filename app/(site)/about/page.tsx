@@ -20,7 +20,10 @@ export default function AboutPage() {
         Используем bg-background как fallback.
       */}
       <section className="relative h-[70vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden bg-background">
-        <div className="absolute inset-0 bg-[url('/slide-factory.jpg')] bg-cover bg-center opacity-50 grayscale hover:grayscale-0 transition-all duration-[2s]" />
+      <div 
+  className="absolute inset-0 bg-cover bg-center opacity-50 grayscale hover:grayscale-0 transition-all duration-[2s]" 
+  style={{ backgroundImage: "url('/slide-factory.jpg')" }}
+/>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-background" />
 
         <Container className="relative z-10 text-center">
@@ -225,7 +228,10 @@ export default function AboutPage() {
 
             <div className="lg:w-1/3 w-full shrink-0 relative z-10">
               <div className="aspect-video lg:aspect-square w-full rounded-2xl overflow-hidden relative border border-border shadow-lg">
-                <div className="absolute inset-0 bg-[url('/slide-factory.jpg')] bg-cover bg-center opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" />
+              <div 
+  className="absolute inset-0 bg-cover bg-center opacity-50 grayscale hover:grayscale-0 transition-all duration-[2s]" 
+  style={{ backgroundImage: "url('/slide-factory.jpg')" }}
+/>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Factory
                     className="w-20 h-20"

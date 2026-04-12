@@ -26,25 +26,30 @@
   --sf-stack: -apple-system, "SF Pro Text", "SF Pro Display", ".SFNSText", "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui, sans-serif;
 }
 
-/* === ТЕМНАЯ ТЕМА (Сине-оранжевое безумие) === */
+/* === ТЕМНАЯ ТЕМА === */
 .dark {
-  /* Темно-синий фон вместо черного */
-  --bg: linear-gradient(180deg, #0A192F 0%, #060E1B 100%);
+  /* Замени градиент на сплошной глубокий цвет для переменных */
+  --bg: #060E1B; 
   
-  /* Оранжевый акцент из старой светлой темы */
-  --accent: #B22222;    /* Тот самый кирпичный (Firebrick) */
-  --accent-2: #8B0000;  /* Темный кирпич для градиентов */
+  --accent: #B22222;
+  --accent-2: #8B0000;
   
   --text-main: #eaeaea;
-  --text-muted: #8ba0b5; /* Чуть в синеву, чтобы сочеталось */
+  --text-muted: #8ba0b5;
   
-  /* Подложки чуть светлее синего фона */
-  --card-bg: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-  --header-bg: linear-gradient(180deg, rgba(10, 25, 47, 0.8), rgba(6, 14, 27, 0.9));
+  /* Карточки должны быть чуть светлее фона, чтобы не сливаться */
+  --card-bg: rgba(255, 255, 255, 0.03); 
   --muted-border: rgba(255, 255, 255, 0.08);
+  /* Вместо градиента используй полупрозрачный темный цвет */
+  --header-bg: rgba(6, 14, 27, 0.8); 
   
-  --shadow-1: 0 6px 18px rgba(0, 0, 0, 0.5);
-  --shadow-2: 0 10px 30px rgba(0, 0, 0, 0.6);
+  /* Цвет границ тоже стоит сделать мягче для темной темы */
+  --muted-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Чтобы сохранить эффект глубины, примени градиент только к body */
+.dark body {
+  background: linear-gradient(180deg, #0A192F 0%, #060E1B 100%) no-repeat fixed;
 }
 
 /* -- Typography reset & base -- */
