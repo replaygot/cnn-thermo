@@ -20,11 +20,11 @@ export default function AboutPage() {
         Используем bg-background как fallback.
       */}
       <section className="relative h-[70vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden bg-background">
-      <div 
-  className="absolute inset-0 bg-cover bg-center opacity-50 grayscale hover:grayscale-0 transition-all duration-[2s]" 
-  style={{ backgroundImage: "url('/slide-factory.jpg')" }}
-/>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-background" />
+      <div
+          className="absolute inset-0 bg-cover bg-center opacity-70 transition-transform duration-[2s] hover:scale-105"
+          style={{ backgroundImage: "url('/slide-factory.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-background" />
 
         <Container className="relative z-10 text-center">
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-1000">
