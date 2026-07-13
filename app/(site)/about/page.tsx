@@ -422,6 +422,58 @@ export default function AboutPage() {
         </Container>
       </section>
 
+      <section className="py-8 bg-background border-t border-border">
+        <Container>
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-muted">
+            <div>
+              <h4 className="font-bold text-foreground mb-3">Радиаторы</h4>
+              <ul className="space-y-2 list-disc list-inside">
+                <li>биметаллические радиаторы</li>
+                <li>радиаторы отопления</li>
+                <li>купить радиаторы отопления</li>
+                <li>радиатор отопления</li>
+                <li>биметаллический радиатор</li>
+                <li>батареи отопления</li>
+                <li>секционные радиаторы</li>
+                <li>отопительные радиаторы</li>
+                <li>алюминиевые радиаторы</li>
+                <li>радиаторы для квартир</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-foreground mb-3">Производство и поставки</h4>
+              <ul className="space-y-2 list-disc list-inside">
+                <li>производство радиаторов</li>
+                <li>завод биметаллических радиаторов</li>
+                <li>производство радиаторов Казахстан</li>
+                <li>поставки радиаторов</li>
+                <li>радиаторы для строительных компаний</li>
+                <li>радиаторы для застройщиков</li>
+                <li>радиаторы для дилеров</li>
+                <li>OEM производство радиаторов</li>
+                <li>экспорт радиаторов</li>
+                <li>производитель отопительного оборудования</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-foreground mb-3">География — Казахстан</h4>
+              <ul className="space-y-2 list-disc list-inside">
+                <li>биметаллические радиаторы Казахстан</li>
+                <li>радиаторы Алматы</li>
+                <li>радиаторы Астана</li>
+                <li>радиаторы Павлодар</li>
+                <li>радиаторы Шымкент</li>
+                <li>радиаторы Караганда</li>
+                <li>купить радиаторы Казахстан</li>
+                <li>производитель радиаторов Казахстан</li>
+              </ul>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       <CTASection />
     </>
   );
