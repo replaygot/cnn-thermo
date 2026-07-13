@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     "СНН",
     "радиаторы оптом",
   ],
+  icons: {
+    icon: "/logo/favicon.ico",
+  },
   authors: [{ name: SITE_NAME }],
   openGraph: {
     title: `${SITE_NAME} — премиальные биметаллические радиаторы`,
